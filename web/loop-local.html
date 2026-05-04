@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전주 자율주행 버스 노선도</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/loop-local.css">
+</head>
+<body>
+  <img src="assets/loop.png" alt="">
+
+  <!-- 하단 버튼 -->
+  <div class="footer-buttons">
+    <button onclick="navigateTo('bustime.html')">버스 <br> 시간표</button>
+    <button onclick="navigateTo('loop-time.html')">현재 버스 <br> 위치</button>
+    <button onclick="navigateTo('home.html')">홈</button>
+  </div>
+
+  <script>
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

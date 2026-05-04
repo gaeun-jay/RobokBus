@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'Jalnan';
+  src: url('../assets/fonts/JalnanOTF.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 전체 컨테이너 */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 92vh;
+  background-color: #ffffff;
+  font-family: 'Jalnan', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+}
+
+/* 타임라인 */
+.timeline {
+  border-left: 15px solid #007BFF; 
+  position: relative;
+  padding-left: 12px; 
+  margin-bottom: 0; 
+  height: calc(100% + 60px); 
+  padding-top: 60px; 
+}
+
+.stop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.stopprevlast {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.stoplast {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 4px solid #007BFF;
+  border-radius: 50%;
+  position: absolute;
+  left: -38px; 
+  z-index: 1; 
+}
+
+.circlefill {
+  width: 30px;
+  height: 30px;
+  background-color: #006fe5;
+  border: 4px solid #006fe5;
+  border-radius: 50%;
+  position: absolute;
+  left: -38px;
+  z-index: 1;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-left: 10px;
+}
+
+.label small {
+  display: block;
+  font-size: 12px;
+  color: #555;
+}
+
+.arrival-line {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 20px; 
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  border-top: 2px solid #818283;
+}
+
+.arrival-line span {
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bus-icon img {
+  padding-top: 20px;
+  width: 50px;
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+}
+
+.arrival-text {
+  font-size: 20px;
+  color: #01EBA1;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+/* Footer Buttons */
+.footer-buttons {
+  display: flex;
+  justify-content: space-around;
+  background-color: #007BFF;
+  width: 100%;
+  height: 80px;
+  padding: 10px 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 하단 버튼 스타일 */
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0090EA;
+  padding: 10px 0;
+  width: 100%;
+  height: 80px;
+  margin: 0px auto 0;
+}
+
+.footer-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0090EA;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Jalnan', sans-serif;
+  line-height: 24px;
+}
+
+.footer-buttons button:hover {
+  background-color: #003f8a;
+}

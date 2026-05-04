@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전주 자율주행 버스 실시간 시간표</title>
+  <link rel="stylesheet" href="css/loop-time.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- 정류장 루프 -->
+    <div class="timeline">
+      <div class="stop">
+        <div class="circle"></div>
+        <div class="label">
+          전주 한옥마을<br>
+          <small>Jeonju Hanok Village</small>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="circle"></div>
+        <div class="label">
+          전동성당<br>
+          <small>Jeongdong Catholic Cathedral</small>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="circle"></div>
+        <div class="label">
+          전주전통술박물관<br>
+          <small>Jeonju Traditional Liquor Museum</small>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="circlefill"></div>
+        <div class="label">
+          전주 동물원<br>
+          <small>Jeonju Zoo</small>
+        </div>
+      </div>
+      <div class="stopprevlast">
+        <div class="circle"></div>
+        <div class="label">
+          전주 난장<br>
+          <small>Jeonju Nanjang</small>
+        </div>
+      </div>
+      <div class="stoplast">
+        <div class="circle"></div>
+        <div class="label">
+          <br>전주국악방송, 전주대사습청<br>
+          <small>Jeonju Gugak Broadcasting Corporation,<br>Jeonju Daesaseupcheong</small><br>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 도착 정보 --> 
+    <div class="arrival-line">
+      <span>전주 동물원</span>
+      <div class="bus-icon">
+        <img src="assets/lbus.png" alt="Bus Icon"/>
+      </div>
+      <span>전주 난장</span>
+    </div>
+    <br>
+    <p class="arrival-text">5분 후 전주난장 정류장 도착</p>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="footer-buttons">
+    <button onclick="navigateTo('loop-local.html')">버스<br>노선 정보</button>
+    <button onclick="navigateTo('bustime.html')">버스 시간표</button>
+    <button onclick="navigateTo('home.html')">홈</button>
+  </div>
+
+  <script>
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>

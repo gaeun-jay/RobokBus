@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/robok.png">
+    <link rel="stylesheet" href="css/stampMap.css">
+    <link rel="stylesheet" href="css/base.css">
+    <title>전북 방문 스탬프</title>
+</head>
+<body>
+    <header>
+        <a href="home.html">
+            <img src="assets/jeonbook.png" alt="전북 로고" />
+        </a>
+    </header>
+    <section>
+        <img id="mapImage" src="assets/map.png" alt="스탬프맵" />
+    </section>
+    <footer>
+        <a href="stampMap.html">
+            <img src="assets/stamp.png" alt="스탬프맵 페이지 이동" />
+        </a>
+        <a href="bustime.html">
+            <img src="assets/bus.png" alt="버스시간표 페이지 이동" />
+        </a>
+        <a href="totalcharacter.html">
+            <img src="assets/change.png" alt="캐릭터 설정 페이지 이동" /> 
+        </a>
+    </footer>
+    <div class="alert-box">
+        <p>지금 김제시를 여행하고 계신가요?</p>
+        <button class="yes">예</button>
+        <button class="no">아니오</button>
+    </div>
+
+    <img src="assets/jstamp.png" alt="전북 스탬프" class="stamp" />
+
+    <div id="dynamicPopup" class="dynamic-popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <img src="assets/ssari.png" alt="싸리 캐릭터" />
+            <span class="cname"><P>싸리</P></span>
+            <p class="popup-message">김제시 캐릭터 '싸리' 획득!</p>
+        </div>
+    </div>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.no').addEventListener('click', function () {
+        document.querySelector('.alert-box').style.display = 'none';
+    });
+
+    document.querySelector('.yes').addEventListener('click', function () {
+        document.querySelector('.alert-box').style.display = 'none';
+
+        const stamp = document.querySelector('.stamp');
+        stamp.style.display = 'block';
+
+        let size = 300;
+        let moveX = 0;
+        let moveY = 0;
+
+        const shrinkInterval = setInterval(() => {
+            size -= 5;
+            moveX -= 3.5;
+            moveY -= 3;
+
+            stamp.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+            stamp.style.width = size + 'px';
+
+            if (size <= 110) {
+                clearInterval(shrinkInterval);
+                stamp.style.display = 'none';
+                document.getElementById('mapImage').src = 'assets/map2.png';
+
+                // 1초 후 동적 창 띄움
+                setTimeout(() => {
+                    const popup = document.getElementById('dynamicPopup');
+                    popup.style.display = 'block';
+                }, 1000);
+            }
+        }, 30);
+    });
+
+    // 캐릭터 획득 창 닫기
+    document.querySelector('.close-btn').addEventListener('click', function () {
+        const popup = document.getElementById('dynamicPopup');
+        popup.style.display = 'none';
+    });
+    });
+
+    </script>
+</body>
+</html>

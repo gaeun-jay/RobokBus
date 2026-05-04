@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.top-image {
+    width: 800px;
+    margin-bottom: 2rem;
+}
+
+#canvas3d {
+    width: 800px !important;
+    height: 800px !important;
+    margin-bottom: 2rem;
+}
+
+.loading-bar {
+    width: 800px;
+    height: 18px;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+
+
+.title {
+    font-family: 'Sigmar', cursive;
+    font-size: 5.875rem;
+    font-weight: bold;
+    color: #01EBA1;
+}
+
+
+
+.loading-progress {
+    height: 100%;
+    background-color: #0090EA;
+    border-radius: 9999px;
+    animation: loading 8s linear forwards; /* 10 seconds animation duration */
+}
+
+@keyframes loading {
+    0% { width: 0; }
+    100% { width: 100%; }
+}

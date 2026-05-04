@@ -1,0 +1,80 @@
+header{margin-bottom: 10px;}
+
+@font-face {
+  font-family: 'Jalnan';
+  src: url('../assets/fonts/JalnanOTF.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 전체 컨테이너 */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0090EA; /* 전체 배경 파란색 */
+    min-height: 100vh;
+    font-family: 'Jalnan', sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* 페이지 제목 */
+  .title {
+    font-size: 1.5rem;
+    color: white; /* 제목 글씨색 흰색 */
+    margin-bottom: 1.5rem;
+  }
+  
+  /* 캐릭터 카드 리스트 */
+  .character-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* 카드 간 간격 */
+  }
+  
+  /* 개별 캐릭터 카드 */
+  .character-card {
+    background: white; /* 카드 배경 흰색 */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    color: #333; /* 글씨색 어두운 회색 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 카드 그림자 */
+  }
+  .character-card-s { /*싸리용 카드 하나 더 만듬 -> footer를 위한 여백 때문에*/
+    background: white; /* 카드 배경 흰색 */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    color: #333; /* 글씨색 어두운 회색 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 카드 그림자 */
+    margin-bottom: 130px;
+  }
+  
+  .character-image {
+      width: 250px;
+      margin-bottom: 10px;
+    }
+
+  .character-image-r { /*로복이 혼자 너무 조그마해서 추가함*/
+      width: 300px;
+      margin-bottom: 10px;
+  }
+  
+  .character-name {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    border-top: 1px solid #ccc; /* 구분선 */
+    padding-top: 10px;
+    font-weight: bold;
+    color: #0090EA; /* 이름 색상 파란색 */
+  }
+  

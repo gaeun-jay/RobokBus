@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>캐릭터 모음집</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/totalcharacter.css">
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="home.html">
+          <img src="assets/jeonbook.png" alt="전북 로고" />
+      </a>
+    </header>
+
+    <h1 class="title">Total Character</h1>
+
+    <!-- 캐릭터 목록 -->
+    <div class="character-list">
+      <!-- 로복이 -->
+      <div class="character-card" onclick="selectCharacter('assets/robok.png')">
+        <img src="assets/robok.png" alt="로복이" class="character-image-r">
+        <p class="character-name"><br>로복이</p>
+      </div>
+
+      <!-- 마룡이 -->
+      <div class="character-card" onclick="selectCharacter('assets/maryong.png')">
+        <img src="assets/maryong.png" alt="마룡이" class="character-image">
+        <p class="character-name"><br>마룡이</p>
+      </div>
+
+      <!-- 싸리 -->
+      <div class="character-card-s" onclick="selectCharacter('assets/ssari.png')">
+        <img src="assets/ssari.png" alt="싸리" class="character-image">
+        <p class="character-name"><br>싸리</p>
+      </div>
+    </div>
+  </div> 
+
+  <footer>
+    <a href="stampMap.html">
+        <img src="assets/stamp.png" alt="스탬프맵 페이지 이동" />
+    </a>
+    <a href="bustime.html">
+        <img src="assets/bus.png" alt="버스시간표 페이지 이동" />
+    </a>
+    <a href="totalcharacter.html">
+        <img src="assets/change.png" alt="캐릭터 설정 페이지 이동" /> 
+    </a>
+</footer>
+
+  <script>
+    function selectCharacter(imagePath) {
+      sessionStorage.setItem("selectedCharacter", imagePath);
+      window.location.href = "home.html";
+    }
+  </script>
+</body>
+</html>

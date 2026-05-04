@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로복</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <header> <!-- 상단 로고 -->
+    <a href="home.html">
+        <img src="assets/jeonbook.png" alt="전북 로고" />
+    </a>
+  </header>
+
+  <div class="container">
+
+    <!-- 레벨 텍스트 -->
+    <h2 class="level-text">LV. 99</h2>
+
+    <!-- 원형 링과 이미지 -->
+    <div class="progress-ring">
+      <svg width="300" height="300">
+        <circle cx="150" cy="150" r="140" stroke="#ccc" stroke-width="20" fill="none" />
+        <circle class="progress" cx="150" cy="150" r="140" stroke="#0090EA" stroke-width="20" fill="none" stroke-dasharray="950.65" stroke-dashoffset="150"  transform="rotate(-90 150 150)" />
+      </svg>
+      <!-- Make the image clickable -->
+      <img id="home-character" src="/assets/robok.png" alt="로복이" class="circle-image" onclick="navigateTo('totalcharacter.html')">
+    </div>
+
+    <!-- 상태 텍스트 -->
+    <p class="status-text">
+      <span class="underline">로복이</span>님은 전북 현지인 !
+    </p>
+
+    <!-- 버튼 -->
+    <div class="button-container">
+      <button-l onclick="navigateTo('stampMap.html')">전북<br>STAMP</button-l>
+      <button-r onclick="navigateTo('bustime.html')">버스<br>시간표</button-r>
+    </div>
+  </div>
+
+  <script>
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+
+    // Check for selected character in session storage
+    document.addEventListener("DOMContentLoaded", () => {
+      const selectedCharacter = sessionStorage.getItem("selectedCharacter");
+      if (selectedCharacter) {
+        document.getElementById("home-character").src = selectedCharacter;
+      }
+    });
+  </script>
+</body>
+</html>

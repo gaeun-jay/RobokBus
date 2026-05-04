@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전북 자율주행 버스 시간표</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/bustime.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="home.html">
+                <img src="assets/jeonbook.png" alt="전북 로고" />
+            </a>
+        </header>
+        <h1>전북 자율주행 버스 시간표</h1>
+        
+        <section class="table-section">
+            <h2>전주 &gt; 군산</h2>
+            <table>
+                <tr>
+                    <td>오전</td>
+                    <td>09시 20분</td>
+                </tr>
+                <tr>
+                    <td>오전</td>
+                    <td>09시 50분</td>
+                </tr>
+                <tr>
+                    <td>오전</td>
+                    <td>11시 20분</td>
+                </tr>
+                <tr>
+                    <td>오후</td>
+                    <td>1시 30분</td>
+                </tr>
+                <tr>
+                    <td>오후</td>
+                    <td>4시 10분</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="table-section">
+            <h2>군산 &gt; 김제</h2>
+            <table>
+                <tr>
+                    <td>오전</td>
+                    <td>9시 50분</td>
+                </tr>
+                <tr>
+                    <td>오전</td>
+                    <td>10시 50분</td>
+                </tr>
+                <tr>
+                    <td>오전</td>
+                    <td>11시 40분</td>
+                </tr>
+                <tr>
+                    <td>오후</td>
+                    <td>3시</td>
+                </tr>
+                <tr>
+                    <td>오후</td>
+                    <td>4시 10분</td>
+                </tr>
+                <tr>
+                    <td>오후</td>
+                    <td>4시 50분</td>
+                </tr>
+                <tr>
+                    <td>오후</td>
+                    <td>5시</td>
+                </tr>
+                <tr>
+                    <td>오후</td>
+                    <td>8시 10분</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="footer-buttons">
+        <button onclick="navigateTo('loop-local.html')">버스 <br>노선정보</button>
+        <button onclick="navigateTo('loop-time.html')">현재 버스 <br> 위치</button>
+        <button onclick="navigateTo('home.html')">홈</button>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

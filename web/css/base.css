@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    width: 180px;
+}
+
+footer {
+    background-color: #0090EA;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer img {
+    width: 50px;
+}

@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'Jalnan';
+  src: url('../assets/fonts/JalnanOTF.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 기본 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: 'Jalnan', sans-serif;
+}
+
+/* 루프 컨테이너 */
+.loop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 600px;
+  flex: 1; /* 하단 버튼과 공간을 균등 분배 */
+}
+
+.loop {
+  width: 200px; /* 루프 가로 */
+  height: 500px; /* 루프 세로 */
+  border: 8px solid #007BFF; /* 파란색 테두리 */
+  border-radius: 50px; /* 약간 둥근 모양 */
+  position: relative;
+}
+
+/* 정류장 점 */
+.stop {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 5px solid #007BFF; /* 테두리 색상 */
+  border-radius: 50%; /* 원형 */
+  position: absolute;
+}
+
+/* 정류장 이름 */
+.stop-label {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #000;
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 120px;
+}
+
+/* 왼쪽 정류장 이름 */
+.stop-label.left {
+  transform: translate(-140%, -50%);
+  transform: rotate(90deg);
+  text-align: center;
+}
+
+/* 오른쪽 정류장 이름 */
+.stop-label.right {
+  transform: translate(-140%, -50%);
+  transform: rotate(-90deg);
+}
+
+/* 작은 텍스트 */
+.stop-label small {
+  font-size: 9px;
+  color: #555;
+  font-weight: normal;
+}
+
+/* 하단 버튼 스타일 */
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0090EA;
+  padding: 10px 0;
+  width: 100%;
+  height: 80px;
+  margin: 0px auto 0;
+}
+
+.footer-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0090EA;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Jalnan', sans-serif;
+  line-height: 24px;
+}
+
+.footer-buttons button:hover {
+  background-color: #003f8a;
+}

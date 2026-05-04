@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Jalnan';
+    src: url('../assets/fonts/JalnanOTF.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 기본 스타일 */
+body {
+    font-family: 'Jalnan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 컨테이너 */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* 제목 스타일 */
+h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 섹션 제목 스타일 */
+h2 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #2f353b;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+table th, table td {
+    border: 2px solid #0090EA;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+}
+
+table th {
+    background-color: #eaf4ff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* 하단 버튼 스타일 */
+.footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0090EA;
+    padding: 10px 0;
+    width: 100%;
+    height: 80px;
+    margin: 0px auto 0;
+}
+
+.footer-buttons button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0090EA;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Jalnan', sans-serif;
+    line-height: 24px;
+}
+
+.footer-buttons button:hover {
+    background-color: #003f8a;
+}
