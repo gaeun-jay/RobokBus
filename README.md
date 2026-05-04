@@ -9,6 +9,8 @@
 </div>
 
 ---
+> ⚠️ **안내**: 포트폴리오 정리를 위해 인식 코드(analysis)와 HTML(`robokbusWeb`) 레포지토리를 하나로 통합한 프로젝트입니다.
+> - HTML 원본: [na0young/robokbusWeb](https://github.com/na0young/robokbusWeb.git)
 
 ## 🏆 수상
 
@@ -170,7 +172,7 @@ Robok_Bus/
 ```bash
 # 1. 레포지토리 클론
 git clone <repository-url>
-cd robokbus
+cd robokbus/analysis
 
 # 2. 패키지 설치
 pip install -r requirements.txt
